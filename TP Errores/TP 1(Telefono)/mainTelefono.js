@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var TelefonoConCamara_1 = require("./TelefonoConCamara");
+var TelefonoConRadio_1 = require("./TelefonoConRadio");
+var miTelefonoConCamara = new TelefonoConCamara_1.TelefonoConCamara(80);
+miTelefonoConCamara.prenderApagar();
+console.log("Batería actual:" + miTelefonoConCamara.bateriaActual() + "%");
+miTelefonoConCamara.cambiarBateria(5);
+miTelefonoConCamara.hacerFoto();
+miTelefonoConCamara.hacerLlamada("123456789");
+var miTelefonoConRadio = new TelefonoConRadio_1.TelefonoConRadio(60, "101.2 FM");
+miTelefonoConRadio.prenderApagar();
+console.log("Batería actual:" + miTelefonoConRadio.bateriaActual() + "%");
+miTelefonoConRadio.verFrecuenciaActual();
+miTelefonoConRadio.prenderApagar();
+miTelefonoConRadio.mandarMensaje("¡Hola!", "987654321");
